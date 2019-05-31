@@ -36,6 +36,15 @@
             android:id="@+id/pager" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/nav_view"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.120000005"/>
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.02"/>
+    <Button
+            android:text="各店舗のご予約はこちらから！"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/BookingButton" android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/pager" android:textSize="18sp"
+            android:textAllCaps="true" android:textAlignment="center" android:textStyle="bold"
+            android:lineSpacingExtra="8sp" android:typeface="normal"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
