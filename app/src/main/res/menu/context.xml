@@ -3,6 +3,6 @@
 
     <item android:title="SMSで予約" android:id="@+id/sms"/>
     <item android:title="メールで予約" android:id="@+id/mail"/>
-    <item android:title="共有する" android:id="@+id/share"/>
+    <item android:title="電話で予約" android:id="@+id/share"/>
     <item android:title="ウェブサイトを開く" android:id="@+id/browse"/>
 </menu>

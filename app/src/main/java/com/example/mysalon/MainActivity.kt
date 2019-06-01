@@ -13,6 +13,9 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.concurrent.timer
+import android.content.Intent
+import android.net.Uri
+
 
 class MainActivity : AppCompatActivity() {
 //スライド
@@ -53,11 +56,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
-//コンテキストメニュー
+//コンテキストメニュー長押し
         registerForContextMenu(BookingButton)
+//        エンドコンテキスト
 
+// ナビメニュー
         textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
+//        エンドナビ
+
 //スライドショー
         pager.adapter = MyAdapter(supportFragmentManager)
         val handler = Handler()
@@ -68,7 +75,7 @@ class MainActivity : AppCompatActivity() {
         }
 //        エンドスライド
     }
-
+//    コンテキストメニュー
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
         super.onCreateContextMenu(menu, v, menuInfo)
         menuInflater.inflate(R.menu.context, menu)
@@ -76,11 +83,24 @@ class MainActivity : AppCompatActivity() {
 
     override fun onContextItemSelected(item: MenuItem?): Boolean {
         when(item?.itemId){
-            R.id.sms ->return true
+            R.id.sms -> {
+                val number ="999-9999-9999"
+                val uri = Uri.parse("sms:$number")
+                var intent = Intent(Intent.ACTION_VIEW)
+                intent.data = uri
+                startActivity(intent)
+                return true
+            }
             R.id.mail ->return true
-            R.id.share ->return true
+            R.id.share -> {
+                val uri = Uri.parse("tel:99999999999")
+                val intent = Intent(Intent.ACTION_DIAL, uri)
+                startActivity(intent)
+                return true
+            }
             R.id.browse ->return true
         }
         return super.onContextItemSelected(item)
     }
+//    エンドコンテキストメニュー
 }
