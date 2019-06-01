@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="SMSで予約" android:id="@+id/sms"/>
+    <item android:title="メールで予約" android:id="@+id/mail"/>
+    <item android:title="共有する" android:id="@+id/share"/>
+    <item android:title="ウェブサイトを開く" android:id="@+id/browse"/>
+</menu>

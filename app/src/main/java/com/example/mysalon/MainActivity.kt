@@ -2,6 +2,9 @@ package com.example.mysalon
 
 import android.os.Bundle
 import android.os.Handler
+import android.view.ContextMenu
+import android.view.MenuItem
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
@@ -50,10 +53,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
+//コンテキストメニュー
+        registerForContextMenu(BookingButton)
 
         textMessage = findViewById(R.id.message)
         navView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener)
-
+//スライドショー
         pager.adapter = MyAdapter(supportFragmentManager)
         val handler = Handler()
         timer(period = 4500){
@@ -61,5 +66,21 @@ class MainActivity : AppCompatActivity() {
                 pager.currentItem = (pager.currentItem+1)%4
             }
         }
+//        エンドスライド
+    }
+
+    override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.context, menu)
+    }
+
+    override fun onContextItemSelected(item: MenuItem?): Boolean {
+        when(item?.itemId){
+            R.id.sms ->return true
+            R.id.mail ->return true
+            R.id.share ->return true
+            R.id.browse ->return true
+        }
+        return super.onContextItemSelected(item)
     }
 }

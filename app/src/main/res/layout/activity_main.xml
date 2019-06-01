@@ -36,7 +36,7 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.02"
     />
     <Button
-            android:text="各店舗のご予約はこちらから！"
+            android:text="ご予約はこちらを長押し！"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/BookingButton" android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
