@@ -63,10 +63,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //        ネクストボタン
-        AboutButton.setOnClickListener { onMainNextButtonTapped(it)}
-        ShopButton.setOnClickListener { onMainNextButtonTapped(it)}
-        StaffButton.setOnClickListener { onMainNextButtonTapped(it)}
-        StyleButton.setOnClickListener { onMainNextButtonTapped(it)}
+        AboutButton.setOnClickListener { onNextButtonTapped(it) }
+        ShopButton.setOnClickListener { onNextButtonTapped(it) }
+        StaffButton.setOnClickListener { onNextButtonTapped(it) }
+        StyleButton.setOnClickListener { onNextButtonTapped(it) }
 //        エンドネクストボタン
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
@@ -90,6 +90,14 @@ class MainActivity : AppCompatActivity() {
         }
 //        エンドスライド
     }
+    //    メインネクストボタン
+      fun onNextButtonTapped(view: View?) {
+        val intent = Intent(this,Main_next::class.java)
+        intent.putExtra("MY_IMAGE", view?.id)
+        startActivity(intent)
+    }
+//    エンドメインネクストボタン
+
 //    コンテキストメニュー
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
         super.onCreateContextMenu(menu, v, menuInfo)
@@ -140,10 +148,4 @@ class MainActivity : AppCompatActivity() {
         return super.onContextItemSelected(item)
     }
 //    エンドコンテキストメニュー
-//    メインネクストボタン
-    fun onMainNextButtonTapped(view: View) {
-    val intent = Intent(this,Main_next::class.java)
-    startActivity(intent)
-    }
-//    エンドメインネクストボタン
 }

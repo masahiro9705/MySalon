@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main_next.*
 
 class Main_next : AppCompatActivity() {
 
@@ -36,6 +37,16 @@ class Main_next : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_next)
+
+        val id = intent.getIntExtra("MY_IMAGE",0)
+        when(id) {
+            R.id.AboutButton ->NextImage.setImageResource(R.drawable.top1)
+            R.id.ShopButton ->NextImage.setImageResource(R.drawable.top2)
+            R.id.StaffButton ->NextImage.setImageResource(R.drawable.top3)
+            R.id.StyleButton ->NextImage.setImageResource(R.drawable.salon2)
+
+        }
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         textMessage = findViewById(R.id.message)
