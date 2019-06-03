@@ -44,13 +44,13 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.navigation_menu -> {
                 textMessage.setText(R.string.title_menu)
-                val intent = Intent(this,MainActivity::class.java)
+                val intent = Intent(this,MenuActivitity::class.java)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_access -> {
                 textMessage.setText(R.string.title_access)
-                val intent = Intent(this,MainActivity::class.java)
+                val intent = Intent(this,AccessAcvivity::class.java)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
