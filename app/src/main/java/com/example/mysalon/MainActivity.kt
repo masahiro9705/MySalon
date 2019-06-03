@@ -91,14 +91,36 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 return true
             }
-            R.id.mail ->return true
+            R.id.mail -> {
+                val email = "nobody@example.com"
+                val subject ="予約お問い合わせ"
+                val text = "以下のとおり予約希望します。"
+                val uri = Uri.parse("mailto:")
+                val intent =Intent(Intent.ACTION_SENDTO)
+                intent.data = uri
+                intent.putExtra(Intent.EXTRA_EMAIL,arrayOf(email))
+                        .putExtra(Intent.EXTRA_SUBJECT,subject)
+                        .putExtra(Intent.EXTRA_TEXT, text)
+                if (intent.resolveActivity(packageManager) != null ){
+                    startActivity(intent)
+                }
+                return true
+            }
             R.id.share -> {
                 val uri = Uri.parse("tel:99999999999")
                 val intent = Intent(Intent.ACTION_DIAL, uri)
                 startActivity(intent)
                 return true
             }
-            R.id.browse ->return true
+            R.id.browse -> {
+                val url: String = "https://instagram.com/_ats_wtnb?igshid=1sdh8qyme6wdt"
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse(url)
+                if (intent.resolveActivity(packageManager) != null){
+                    startActivity(intent)
+                }
+                return true
+            }
         }
         return super.onContextItemSelected(item)
     }
