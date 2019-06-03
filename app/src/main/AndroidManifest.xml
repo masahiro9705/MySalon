@@ -10,6 +10,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
+                android:name=".Main_next"
+                android:label="@string/title_activity_main_staff">
+        </activity>
+        <activity
                 android:name=".AccessAcvivity"
                 android:label="@string/title_activity_access_acvivity">
         </activity>

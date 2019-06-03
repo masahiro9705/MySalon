@@ -61,7 +61,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        //        ネクストボタン
+        AboutButton.setOnClickListener { onMainNextButtonTapped(it)}
+        ShopButton.setOnClickListener { onMainNextButtonTapped(it)}
+        StaffButton.setOnClickListener { onMainNextButtonTapped(it)}
+        StyleButton.setOnClickListener { onMainNextButtonTapped(it)}
+//        エンドネクストボタン
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
+
 //コンテキストメニュー長押し
         registerForContextMenu(BookingButton)
 //        エンドコンテキスト
@@ -131,4 +140,10 @@ class MainActivity : AppCompatActivity() {
         return super.onContextItemSelected(item)
     }
 //    エンドコンテキストメニュー
+//    メインネクストボタン
+    fun onMainNextButtonTapped(view: View) {
+    val intent = Intent(this,Main_next::class.java)
+    startActivity(intent)
+    }
+//    エンドメインネクストボタン
 }
