@@ -42,14 +42,14 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_dashboard -> {
-                textMessage.setText(R.string.title_dashboard)
+            R.id.navigation_menu -> {
+                textMessage.setText(R.string.title_menu)
                 val intent = Intent(this,MainActivity::class.java)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.navigation_notifications -> {
-                textMessage.setText(R.string.title_notifications)
+            R.id.navigation_access -> {
+                textMessage.setText(R.string.title_access)
                 val intent = Intent(this,MainActivity::class.java)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
