@@ -46,6 +46,18 @@ class Main_next : AppCompatActivity() {
             R.id.StyleButton ->NextImage.setImageResource(R.drawable.salon2)
 
         }
+        when(id){
+            R.id.AboutButton -> h1text.setText(R.string.about_h1)
+            R.id.StaffButton -> h1text.setText(R.string.staff_1)
+            R.id.StyleButton -> h1text.setText(R.string.style_h1)
+            R.id.ShopButton ->  h1text.setText(R.string.shop_h1)
+        }
+        when(id){
+            R.id.AboutButton -> h2text.setText(R.string.about_h2)
+            R.id.StaffButton -> h2text.setText(R.string.staff_2)
+            R.id.StyleButton -> h2text.setText(R.string.style_h2)
+            R.id.ShopButton ->  h2text.setText(R.string.shop_h2)
+        }
 
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 

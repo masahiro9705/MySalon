@@ -11,4 +11,12 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_activity_access_acvivity">AccessAcvivity</string>
     <string name="title_activity_main_staff">Main_staff</string>
+    <string name="about_h1">ABOUT US</string>
+    <string name="about_h2">Meteorとは</string>
+    <string name="staff_1">STAFF</string>
+    <string name="staff_2">ATSUSHI WATANABE</string>
+    <string name="shop_h1">SHOP</string>
+    <string name="shop_h2">店舗情報</string>
+    <string name="style_h1">STYLE</string>
+    <string name="style_h2">ATSUSHI　STYLE</string>
 </resources>
