@@ -13,10 +13,14 @@
     <string name="title_activity_main_staff">Main_staff</string>
     <string name="about_h1">ABOUT US</string>
     <string name="about_h2">Meteorとは</string>
-    <string name="staff_1">STAFF</string>
-    <string name="staff_2">ATSUSHI WATANABE</string>
+    <string name="staff_h1">STAFF</string>
+    <string name="staff_h2">ATSUSHI WATANABE</string>
     <string name="shop_h1">SHOP</string>
     <string name="shop_h2">店舗情報</string>
     <string name="style_h1">STYLE</string>
     <string name="style_h2">ATSUSHI　STYLE</string>
+    <string name="about_h3">流れ星という意味。 TMRevolutionのこの題名の曲が好きなためこの名前に。</string>
+    <string name="shop_h3">島にあるこじんまりしたサロン、地域密着型。</string>
+    <string name="staff_h3">彼は、COMME des GARCONSの川久保玲に憧れている。</string>
+    <string name="style_h3">彼のカットは、「黒の衝撃」のように評される。</string>
 </resources>
