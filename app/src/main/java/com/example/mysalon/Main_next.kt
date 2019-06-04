@@ -42,7 +42,7 @@ class Main_next : AppCompatActivity() {
         when(id) {
             R.id.AboutButton ->NextImage.setImageResource(R.drawable.top1)
             R.id.ShopButton ->NextImage.setImageResource(R.drawable.top2)
-            R.id.StaffButton ->NextImage.setImageResource(R.drawable.top3)
+            R.id.StaffButton ->NextImage.setImageResource(R.drawable.next2)
             R.id.StyleButton ->NextImage.setImageResource(R.drawable.salon2)
 
         }
