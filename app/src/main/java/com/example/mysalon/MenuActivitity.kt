@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivitity : AppCompatActivity() {
 
@@ -36,6 +37,11 @@ class MenuActivitity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+        webView.settings.javaScriptEnabled = true
+        webView.loadUrl("file:///android_asset/html1/index.html")
+
+
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
         textMessage = findViewById(R.id.message)
