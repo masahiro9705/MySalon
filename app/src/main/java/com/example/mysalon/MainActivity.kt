@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.navigation_access -> {
                 textMessage.setText(R.string.title_access)
-                val intent = Intent(this,AccessAcvivity::class.java)
+                val intent = Intent(this,MapsActivity::class.java)
                 startActivity(intent)
                 return@OnNavigationItemSelectedListener true
             }
