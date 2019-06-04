@@ -54,7 +54,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         }
         false
     }
-
+//エンドナビ
+//    マップ
     /**
      * Manipulates the map once available.
      * This callback is triggered when the map is ready to be used.
@@ -73,5 +74,5 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
         mMap.moveCamera(CameraUpdateFactory.zoomTo(15F))
     }
-
+//エンドマップ
 }
