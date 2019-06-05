@@ -34,7 +34,7 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.02"
     />
     <Button
-            android:text="ご予約はこちらを長押し！"
+            android:text="ご予約はこちらを長押し!"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/BookingButton" android:layout_marginEnd="16dp" app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,8 @@
             app:layout_constraintTop_toBottomOf="@+id/pager" android:textSize="18sp"
             android:textAllCaps="true" android:textAlignment="center" android:textStyle="bold"
             android:lineSpacingExtra="8sp" android:typeface="normal" app:layout_constraintHorizontal_bias="0.0"
-            android:textColorLink="#00B99696"/>
+            android:textColorLink="#00B99696"
+            android:background=""/>
     <ImageButton
             android:layout_width="150dp"
             android:layout_height="150dp" app:srcCompat="@drawable/top1"
