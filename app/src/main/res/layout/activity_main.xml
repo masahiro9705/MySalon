@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:text="@string/title_home"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" android:textColor="#00E9D6D6"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/nav_view"
