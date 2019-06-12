@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.concurrent.timer
 import android.content.Intent
 import android.net.Uri
+import kotlinx.android.synthetic.main.activity_menu.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -142,6 +143,11 @@ class MainActivity : AppCompatActivity() {
                 if (intent.resolveActivity(packageManager) != null){
                     startActivity(intent)
                 }
+                return true
+            }
+            R.id.contact -> {
+                webView.settings.javaScriptEnabled = true
+                webView.loadUrl("file:///android_asset/html1/index.html")
                 return true
             }
         }
